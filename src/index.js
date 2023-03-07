@@ -10,8 +10,10 @@ function websiteFrame() {
     const sideBar = document.createElement('div');
     sideBar.classList.add('side-bar')
     sideBar.textContent = 'sidebar'
+
     const pages = document.createElement('div');
     pages.classList.add('pages')
+    
     const footer = document.createElement('div');
     footer.classList.add('footer');
     footer.textContent = 'footer'

@@ -9,14 +9,21 @@ export default function createHomePage() {
     welcomeTo.textContent = 'Welcome to'
 
     const restaurantName = document.createElement('h1')
+    restaurantName.classList.add('restaurant-name')
     restaurantName.textContent = 'Hungryman Chows'
 
     const slogan = document.createElement('div');
+    slogan.classList.add('slogan')
     slogan.textContent = 'Are you a hungry man? Have some chow!'
 
     const btnContainer = document.createElement('div');
+    btnContainer.classList.add('btn-container')
     const redBtn = document.createElement('button');
+    redBtn.textContent = 'MORE ABOUT US';
+    redBtn.classList.add('red-btn')
     const blackBtn = document.createElement('button');
+    blackBtn.textContent = 'RESERVE A TABLE!';
+    blackBtn.classList.add('black-btn')
     btnContainer.appendChild(redBtn)
     btnContainer.appendChild(blackBtn)
 

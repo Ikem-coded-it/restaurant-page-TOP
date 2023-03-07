@@ -3,22 +3,37 @@
     padding: 0;
 }
 
+:root {
+    --white-font-color: #f8fafc;
+}
+
 @font-face {
     font-family: mynerve;
     src: url('./Font/Mynerve-Regular.ttf');
 }
 
-div {
-    border: 2px solid brown;
+@font-face {
+    font-family: Anton;
+    src: url('./Font/Anton-Regular.ttf');
 }
+
+@font-face {
+    font-family: Tiltprism;
+    src: url('./Font/TiltPrism-Regular-VariableFont_XROT\,YROT.ttf');
+}
+
+/* div {
+    border: 2px solid brown;
+} */
 
 body {
     height: 100vh;
+    color: var(--white-font-color);
 }
 
 #content {
     display: grid;
-    grid-template-rows: 90% 10%;
+    grid-template-rows: 95% 5%;
     grid-template-columns: 20% 80%;
     height: 100%;
 }
@@ -37,7 +52,8 @@ body {
 }
 
 .home-content {
-    background-image: url('./images/istockphoto-688602226-612x612.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+        url('./images/istockphoto-688602226-612x612.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,11 +61,60 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
     align-items: center;
-    color: whitesmoke;
+    color: var(--white-font-color)
 }
 
 .welcome-to {
+    color: #ffb7a5;
+    font-weight: bold;
     font-family: mynerve;
     font-size: 30px;
+}
+
+.restaurant-name {
+    font-family: Tiltprism;
+    font-size: 100px;
+    color: var(--white-font-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slogan {
+    font-size: 40px;
+    font-family: Anton;
+}
+
+.btn-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 4px;
+}
+
+.btn-container button {
+    width: 150px;
+    padding: 10px;
+    color: var(--white-font-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+}
+
+.red-btn {
+    background-color: #e02d00;
+}
+
+.red-btn:hover {
+    background-color: #f55e38;
+    cursor: pointer;
+}
+
+.black-btn {
+    background-color: black;
+}
+
+.black-btn:hover {
+    background-color: rgb(58, 57, 57);
+    cursor: pointer;
 }
