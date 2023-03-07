@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: mynerve;
+    src: url('./Font/Mynerve-Regular.ttf');
+}
+
+div {
+    border: 2px solid brown;
+}
+
+body {
+    height: 100vh;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 20% 80%;
+    height: 100%;
+}
+
+.side-bar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.pages {
+    grid-column: 2 / 3;
+}
+
+.footer {
+    grid-column: 2 / 3;
+}
+
+.home-content {
+    background-image: url('./images/istockphoto-688602226-612x612.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.welcome-to {
+    font-family: mynerve;
+    font-size: 30px;
+}

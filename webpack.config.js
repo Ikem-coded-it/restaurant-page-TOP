@@ -8,7 +8,7 @@ module.exports = {
     },
     devtool: 'inline-source-map', // for finding errors
     devServer: {
-        static: './dist'
+        static: './dist/index.html'
     },
     plugins: [
         new HtmlWebpackPlugin({ // for updating html each time i run build
@@ -36,7 +36,7 @@ module.exports = {
             },
         ]
     },
-    optimization: { // added coz i have more than one entrypoint on a single HTML page.
-        runtimeChunk: 'single',
-    },
+    // optimization: { // added coz i have more than one entrypoint on a single HTML page.
+    //     runtimeChunk: 'single',
+    // },
 }
