@@ -5,6 +5,7 @@
 
 :root {
     --white-font-color: #f8fafc;
+    --main-background: #4b5563;
 }
 
 @font-face {
@@ -49,6 +50,46 @@ body {
 
 .footer {
     grid-column: 2 / 3;
+}
+
+.side-bar-content {
+    display: grid;
+    grid-template-rows: 25% 75%;
+    background: var(--main-background);
+    height: 100%;
+}
+
+.logo-container {
+    background-image: url('./HUNGRYMANCHOWS-logo/cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+
+.tabs-list li {
+    list-style: none;
+    font-family: Anton;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.tabs-list li:hover {
+    background-color: #5a6069;
 }
 
 .home-content {
