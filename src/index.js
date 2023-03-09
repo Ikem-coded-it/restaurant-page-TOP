@@ -1,9 +1,10 @@
 import './style.css';
 import homePage from './home.js';
+import menuPage from './menu.js'
 import logo from './HUNGRYMANCHOWS-logo/cover.png';
  
 
-function websiteFrame() {
+(function websiteFrame() {
     const content = document.createElement('div');
     const body = document.body;
     content.setAttribute('id', 'content')
@@ -26,7 +27,7 @@ function websiteFrame() {
     body.appendChild(content)
 
     pages.appendChild(homePage())
-};
+})();
 
 function createSidebar() {
     const sideBarContent = document.createElement('div');
@@ -67,18 +68,21 @@ function createTabs() {
     tabsList.classList.add('tabs-list')
 
     const homeBtnContainer = document.createElement('div');
+    homeBtnContainer.setAttribute('id', 'home-btn')
     const homeBtn = document.createElement('li')
     homeBtn.textContent = 'Home'
     homeBtnContainer.innerHTML = '<i class="fa-solid fa-house"></i>';
     homeBtnContainer.appendChild(homeBtn)
 
     const menuBtnContainer = document.createElement('div');
+    menuBtnContainer.setAttribute('id', 'menu-btn')
     const menuBtn = document.createElement('li')
     menuBtn.textContent = 'Menu'
     menuBtnContainer.innerHTML = '<i class="fa-solid fa-bars"></i>';
     menuBtnContainer.appendChild(menuBtn);
 
     const contactBtnContainer = document.createElement('div');
+    contactBtnContainer.setAttribute('id', 'contact-btn')
     const contactBtn = document.createElement('li')
     contactBtn.textContent = 'Contacts';
     contactBtnContainer.innerHTML = '<i class="fa-solid fa-phone"></i>';
@@ -91,4 +95,22 @@ function createTabs() {
     return tabsList;
 }
 
-websiteFrame()
+const homeBtn = document.getElementById('home-btn')
+const menuBtn = document.getElementById('menu-btn')
+const contactBtn = document.getElementById('contact-btn')
+
+homeBtn.addEventListener('click', (e) => switchTabs(e.target))
+menuBtn.addEventListener('click', (e) => switchTabs(e.target))
+contactBtn.addEventListener('click', (e) => switchTabs(e.target))
+
+function switchTabs(button) {
+    button.classList.add('active')
+
+    const tabContent = document.getElementsByClassName('pages')[0]
+     
+    tabContent.removeChild(tabContent.firstChild);
+
+    if (button.textContent === 'Menu') tabContent.appendChild(menuPage())
+    if (button.textContent === 'Home') tabContent.appendChild(homePage())
+    if (button.textContent === 'Contacts') tabContent.appendChild(contactPage())
+}
