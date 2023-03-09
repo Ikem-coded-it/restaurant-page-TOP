@@ -17,7 +17,7 @@ function websiteFrame() {
     
     const footer = document.createElement('div');
     footer.classList.add('footer');
-    footer.textContent = 'footer'
+    createFooter(footer);
 
     content.appendChild(sideBar)
     content.appendChild(pages)
@@ -46,22 +46,47 @@ function createSidebar() {
     return sideBarContent;
 }
 
+function createFooter(footer) {
+    const copyright = document.createElement('p');
+    copyright.textContent = `Copyright © ${new Date().getFullYear()} Ikem-Coded-It`;
+
+    const githubLink = document.createElement('a');
+    githubLink.href = "https://github.com/Ikem-Coded-It";
+
+    const githubIcon = document.createElement('i');
+    githubIcon.classList.add('fa');
+    githubIcon.classList.add('fa-github');
+
+    githubLink.appendChild(githubIcon);
+    footer.appendChild(copyright);
+    footer.appendChild(githubLink);
+}
+
 function createTabs() {
     const tabsList = document.createElement('ul');
     tabsList.classList.add('tabs-list')
 
+    const homeBtnContainer = document.createElement('div');
     const homeBtn = document.createElement('li')
     homeBtn.textContent = 'Home'
+    homeBtnContainer.innerHTML = '<i class="fa-solid fa-house"></i>';
+    homeBtnContainer.appendChild(homeBtn)
 
+    const menuBtnContainer = document.createElement('div');
     const menuBtn = document.createElement('li')
     menuBtn.textContent = 'Menu'
+    menuBtnContainer.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    menuBtnContainer.appendChild(menuBtn);
 
+    const contactBtnContainer = document.createElement('div');
     const contactBtn = document.createElement('li')
-    contactBtn.textContent = 'Contacts'
+    contactBtn.textContent = 'Contacts';
+    contactBtnContainer.innerHTML = '<i class="fa-solid fa-phone"></i>';
+    contactBtnContainer.appendChild(contactBtn);
 
-    tabsList.appendChild(homeBtn)
-    tabsList.appendChild(menuBtn)
-    tabsList.appendChild(contactBtn)
+    tabsList.appendChild(homeBtnContainer)
+    tabsList.appendChild(menuBtnContainer)
+    tabsList.appendChild(contactBtnContainer)
 
     return tabsList;
 }

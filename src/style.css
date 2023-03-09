@@ -6,6 +6,7 @@
 :root {
     --white-font-color: #f8fafc;
     --main-background: #4b5563;
+    --main-background-dark: #2f353d;
 }
 
 @font-face {
@@ -20,17 +21,16 @@
 
 @font-face {
     font-family: Tiltprism;
-    src: url('./Font/TiltPrism-Regular-VariableFont_XROT\,YROT.ttf');
+    src: url('./Font/TiltPrism-Regular-VariableFont_XROT,YROT.ttf');
 }
-
-/* div {
-    border: 2px solid brown;
-} */
 
 body {
     height: 100vh;
     color: var(--white-font-color);
 }
+
+
+/* Website frame */
 
 #content {
     display: grid;
@@ -51,6 +51,8 @@ body {
 .footer {
     grid-column: 2 / 3;
 }
+
+/* Side bar */
 
 .side-bar-content {
     display: grid;
@@ -88,9 +90,22 @@ body {
     cursor: pointer;
 }
 
-.tabs-list li:hover {
+.tabs-list div {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-list div:hover {
     background-color: #5a6069;
 }
+
+.tabs-list i {
+    font-size: 20px;
+}
+
+/* Home page */
 
 .home-content {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
@@ -104,7 +119,8 @@ body {
     justify-content: center;
     gap: 10px;
     align-items: center;
-    color: var(--white-font-color)
+    color: var(--white-font-color);
+    padding: 10px;
 }
 
 .welcome-to {
@@ -158,4 +174,113 @@ body {
 .black-btn:hover {
     background-color: rgb(58, 57, 57);
     cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--main-background-dark);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-github {
+    font-size: 20px;
+    color: #e02d00;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        height: 105vh;
+        width: 100vw;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-bar {
+        width: 100vw;
+        height: 200px;
+    }
+
+    .side-bar-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo-container {
+        height: 200px;
+    }
+
+    .tabs-container {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tabs-list {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .tabs-list li {
+        font-size: 15px;
+    }
+
+    .tabs-list div {
+        gap: 0;
+        padding: 0 5px 0 5px;
+    }
+
+    .tabs-list i {
+        font-size: 15px;
+    }
+
+    /* Home page */
+
+    .home-content {
+        gap: 30px;
+        padding: 5px;
+    }
+
+    .welcome-to {
+        font-size: 40px;
+    }
+
+    .restaurant-name {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .slogan {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .btn-container {
+        gap: 5px;
+    }
+
+    .btn-container button {
+        width: 125px;
+        padding: 5px;
+    }
+
+    /* Footer */
+
+    .footer {
+        width: 100%;
+        padding: 15px 0 15px 0;
+        margin-top: 10px;
+    }
 }

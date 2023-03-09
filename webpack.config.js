@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+//const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -8,13 +8,13 @@ module.exports = {
     },
     devtool: 'inline-source-map', // for finding errors
     devServer: {
-        static: './dist/index.html'
+        static: './dist'
     },
-    plugins: [
-        new HtmlWebpackPlugin({ // for updating html each time i run build
-        title: 'Development',
-        }),
-    ],
+    // plugins: [
+    //     new HtmlWebpackPlugin({ // for updating html each time i run build
+    //     title: 'HungryMan Chows',
+    //     }),
+    // ],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
