@@ -4,9 +4,12 @@
 }
 
 :root {
-    --white-font-color: #f8fafc;
+    --white-font-food-color: #f8fafc;
     --main-background: #4b5563;
     --main-background-dark: #2f353d;
+    --github-color: #e02d00;
+    --twitter-color: #00acee;
+    --linkedin-color: #0077b5;
 }
 
 @font-face {
@@ -26,7 +29,7 @@
 
 body {
     height: 100vh;
-    color: var(--white-font-color);
+    color: var(--white-font-food-color);
 }
 
 img {
@@ -204,7 +207,7 @@ img {
 }
 
 .food-container {
-    background-color: #f8fafc;
+    background-color: var(--white-font-food-color);
     padding: 40px;
     color: var(--main-background-dark);
     display: flex;
@@ -226,6 +229,49 @@ img {
     font-family: 'Tangerine', Anton, Tiltprism;
 }
 
+
+/* Contacts page */
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+}
+
+.contacts-container div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 90%;
+    gap: 10px;
+    font-size: 50px;
+    font-family: Anton;
+    color: var(--white-font-color);
+    background-color: #2f353d85;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.contacts-container div i {
+    font-size: 50px;
+}
+
+.fa-github {
+    color: var(--github-color);
+}
+
+.fa-twitter {
+    color: var(--twitter-color);
+}
+
+.fa-linkedin {
+    color: var(--linkedin-color);
+}
+
 /* Footer */
 
 .footer {
@@ -238,7 +284,6 @@ img {
 
 .fa-github {
     font-size: 20px;
-    color: #e02d00;
 }
 
  
@@ -335,6 +380,17 @@ img {
     .btn-container button {
         width: 125px;
         padding: 5px;
+    }
+
+
+    /* Contacts page */
+
+    .contacts-container div {
+        font-size: 20px;
+    }
+
+    .contacts-container div i {
+        font-size: 40px;
     }
 
     /* Footer */

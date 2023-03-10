@@ -26,7 +26,6 @@ export default function createMenuPage() {
         foodContainer.appendChild(img)
 
         const foodName = document.createElement('div');
-        foodName.classList.add('food-name')
         foodName.textContent = `Menu Item`;
         foodContainer.appendChild(foodName)
 
