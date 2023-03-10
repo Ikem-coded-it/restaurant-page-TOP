@@ -125,11 +125,6 @@ img {
 /* Home page */
 
 .home-content {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
-        url('./images/istockphoto-688602226-612x612.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     height: 100%;
     width: 100%;
     display: flex;
