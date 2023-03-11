@@ -6,9 +6,8 @@ Live [here](https://restaurant-j31r.onrender.com)
 
 # Technology used
 
-- HTML
 - CSS
-- JAVASCRIPT
+- Vanilla Javascript
 - Webpack
 
 # Sreps to run locally
