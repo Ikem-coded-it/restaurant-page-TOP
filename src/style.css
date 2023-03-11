@@ -14,17 +14,17 @@
 
 @font-face {
     font-family: mynerve;
-    src: url('./Font/Mynerve-Regular.ttf');
+    src: url('./Font/mynerve-regular-webfont.woff2');
 }
 
 @font-face {
     font-family: Anton;
-    src: url('./Font/Anton-Regular.ttf');
+    src: url('./Font/anton-regular-webfont.woff2');
 }
 
 @font-face {
     font-family: Tiltprism;
-    src: url('./Font/TiltPrism-Regular-VariableFont_XROT,YROT.ttf');
+    src: url('./Font/tiltprism-regular-variablefont_xrotyrot-webfont.woff2');
 }
 
 body {
